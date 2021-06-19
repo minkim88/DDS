@@ -252,7 +252,7 @@ backtest_portfolio =
     rets_save %>% mutate(label = if_else(date == max(date), as.character(round(return,2)), NA_character_)) %>%
       ggplot(aes(x=ymd(date), y=return, col=model_nm)) +
       geom_line(size=1.1) +
-      theme_set(bigstatsr::theme_bigstatsr()) +
+      #theme_set(bigstatsr::theme_bigstatsr()) +
       ggtitle("Portfolio Return") +
       theme(legend.position = c(0.01, 0.99),
             legend.justification = c(0, 1),
